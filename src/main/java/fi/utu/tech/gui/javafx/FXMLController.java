@@ -5,10 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
-/**
- * @author Joonas Humalamäki
- *
- */
+
 /**
  * @author Joonas Humalamäki
  *
@@ -79,7 +76,6 @@ public class FXMLController {
 	
 	double numb1;
 	double numb2;
-	double result2 = 0;
 	int index=0;
 	boolean point = false;
 	
@@ -132,22 +128,22 @@ public class FXMLController {
 			numb1 = Double.parseDouble(result.getText());
 			result.setText("");
 			index = 1;
-			point = true;
+			point = false;
 		} else if (event.getSource() == minus) {
 			numb1 = Double.parseDouble(result.getText());
 			result.setText("");
 			index = 2;
-			point = true;
+			point = false;
 		} else if (event.getSource() == times) {
 			numb1 = Double.parseDouble(result.getText());
 			result.setText("");
 			index = 3;
-			point = true;
+			point = false;
 		} else if (event.getSource() == divided) {
 			numb1 = Double.parseDouble(result.getText());
 			result.setText("");
 			index = 4;
-			point = true;
+			point = false;
 		} else if (event.getSource() == equals && index > 0) {
 			numb2 = Double.parseDouble(result.getText());
 			switch (index) {
@@ -197,10 +193,6 @@ public class FXMLController {
 				} else if (tmp.indexOf(".") > 2) {
 					result.setText(tmp.substring(0, tmp.indexOf(".")-2) + "." + tmp.substring(tmp.indexOf(".")-2, tmp.indexOf(".")) + tmp.substring(tmp.indexOf(".") + 1, tmp.length()));
 				} 
-				// onko seuraava tarpeellinen ?
-				else {
-					result.setText("0.00" + tmp.substring(2, tmp.length()));
-				}
 			}
 			
 		}
