@@ -1,0 +1,13 @@
+.button{
+    -fx-background-color: rgb(135, 172, 201);
+    -fx-text-fill: black;
+    -fx-border-color: rgb(50, 58, 168);
+    -fx-border-radius: 5;
+    -fx-padding: 3 6 6 6;
+}
+.root{
+    -fx-font-size: 16pt;
+    -fx-font-family: "Courier New";
+
+    -fx-background-color: rgb(229, 191, 255);
+}
